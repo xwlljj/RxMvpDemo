@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RxMvpDemo</string>
+    <string name="main_user">姓名: %1$s, 年龄: %2$s, 性别: %3$s</string>
+</resources>
