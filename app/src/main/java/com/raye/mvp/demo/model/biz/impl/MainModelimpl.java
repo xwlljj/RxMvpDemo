@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import rx.Observable;
+import rx.functions.Func0;
 
 /**
  * Created by XieWei on 16/8/1.
@@ -37,7 +38,8 @@ public class MainModelimpl implements MainModel {
 
     @Override
     public Observable<User> loadData() {
-        return Observable.from(getUsers());
+//        return Observable.from(getUsers());
+        return Observable.defer(() -> Observable.from(getUsers()));
     }
 
     @Override

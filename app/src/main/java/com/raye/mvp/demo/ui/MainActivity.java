@@ -38,8 +38,8 @@ public class MainActivity extends BaseActivity implements MainView {
         rvUsers.setAdapter(usersAdapter);
 
         mainPresenter = new MainPresenterImpl(this);
-//        mainPresenter.loadData();
-        mainPresenter.loadDatas();
+        mainPresenter.loadData();
+//        mainPresenter.loadDatas();
 
         usersAdapter.setOnItemClickListener((view, position) -> {
             Toast.makeText(this, usersAdapter.getItem(position).toString(),

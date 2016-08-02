@@ -11,6 +11,7 @@ import com.raye.mvp.demo.ui.view.MainView;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import rx.Observer;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -39,7 +40,8 @@ public class MainPresenterImpl implements MainPresenter {
         Log.d(TAG, "loadData()");
         mainModel.loadData().subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<User>() {
+                .buffer(10)
+                .subscribe(new Observer<List<User>>() {
                     @Override
                     public void onCompleted() {
                         Log.d(TAG, "onCommpleted");
@@ -54,9 +56,9 @@ public class MainPresenterImpl implements MainPresenter {
                     }
 
                     @Override
-                    public void onNext(User user) {
-                        Log.d(TAG, "onNext(" + user + ")");
-                        mainView.onShowUser(user);
+                    public void onNext(List<User> users) {
+                        Log.d(TAG, "onNext(" + users.size() + ")");
+                        mainView.onShowUsers(users);
                     }
                 });
     }
