@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import rx.Observable;
-import rx.functions.Func0;
 
 /**
  * Created by XieWei on 16/8/1.
