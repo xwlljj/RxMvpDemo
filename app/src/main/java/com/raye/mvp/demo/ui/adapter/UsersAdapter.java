@@ -1,6 +1,7 @@
 package com.raye.mvp.demo.ui.adapter;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import java.util.Locale;
  * Created by XieWei on 16/8/1.
  */
 public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserViewHolder> {
+    private static final String TAG = "UsersAdapter";
     private ArrayList<User> users;
 
     public UsersAdapter() {
@@ -48,8 +50,10 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserViewHold
         users = null;
     }
 
+    private static int uc = 0;
     @Override
     public UserViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        Log.e(TAG, "onCreateViewHolder called " + (uc++) + " times");
         return new UserViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.main_user_item, null));
     }
 
