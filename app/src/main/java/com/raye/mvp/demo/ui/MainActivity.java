@@ -41,10 +41,9 @@ public class MainActivity extends BaseActivity implements MainView {
         mainPresenter.loadData();
 //        mainPresenter.loadDatas();
 
-        usersAdapter.setOnItemClickListener((view, position) -> {
-            Toast.makeText(this, usersAdapter.getItem(position).toString(),
-                    Toast.LENGTH_LONG).show();
-        });
+        usersAdapter.setOnItemClickListener((view, position) ->
+                Toast.makeText(this, usersAdapter.getItem(position).toString(),
+                        Toast.LENGTH_LONG).show());
     }
 
     @Override
