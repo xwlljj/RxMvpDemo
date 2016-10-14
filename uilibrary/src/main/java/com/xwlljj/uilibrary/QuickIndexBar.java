@@ -23,7 +23,7 @@ public class QuickIndexBar extends View {
                     "F", "G", "H", "I", "J",
                     "K", "L", "M", "N", "O",
                     "P", "Q", "R", "S", "T",
-                    "U", "V", "W", "X", "Y", "Z"};
+                    "U", "V", "W", "X", "Y", "Z", "#"};
     private Paint paint;
     private float width;
     private float cellHeight;
