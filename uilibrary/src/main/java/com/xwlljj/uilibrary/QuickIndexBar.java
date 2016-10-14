@@ -111,7 +111,7 @@ public class QuickIndexBar extends View {
                 break;
             case MotionEvent.ACTION_UP:
             case MotionEvent.ACTION_CANCEL:
-                lastIndex = -1;
+                lastIndex = -1;//对索引还原，以便下次可以正常点击
                 invalidate();
                 break;
             default:

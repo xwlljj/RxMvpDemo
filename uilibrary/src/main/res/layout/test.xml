@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <com.xwlljj.uilibrary.SwipeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <LinearLayout
+            android:id="@id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"
+            android:orientation="horizontal"></LinearLayout>
+
+        <Button
+            android:id="@id/delete_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_red_light"
+            android:text="删除" />
+    </com.xwlljj.uilibrary.SwipeLayout>
+
     <com.xwlljj.uilibrary.QuickIndexBar
         android:layout_width="30dp"
         android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:visibility="gone"
         android:background="@android:color/holo_red_light" />
 
-</LinearLayout>
+</FrameLayout>

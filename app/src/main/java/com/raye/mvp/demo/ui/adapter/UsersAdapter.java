@@ -54,7 +54,8 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserViewHold
     @Override
     public UserViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Log.e(TAG, "onCreateViewHolder called " + (uc++) + " times");
-        return new UserViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.main_user_item, null));
+        return new UserViewHolder(LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.main_user_item, parent, false));
     }
 
     @Override

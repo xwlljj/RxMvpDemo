@@ -18,11 +18,55 @@
             android:text="没消息" />
     </android.support.v7.widget.Toolbar>
 
+    <com.xwlljj.uilibrary.SwipeLayout
+        android:id="@+id/sl_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/toolbar"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="这是一个可以滑动的 item"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/delete_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#DCDCDC"
+                android:text="收藏" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_red_light"
+                android:text="删除" />
+        </LinearLayout>
+
+    </com.xwlljj.uilibrary.SwipeLayout>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_users"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar"
+        android:layout_below="@id/sl_swipe"
         android:background="@android:color/background_light"
         android:scrollbars="vertical" />
 
@@ -31,7 +75,8 @@
         android:layout_width="30dp"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/toolbar">
+        android:layout_below="@id/toolbar"
+        android:background="@android:color/transparent">
 
     </com.xwlljj.uilibrary.QuickIndexBar>
 </RelativeLayout>

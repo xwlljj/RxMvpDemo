@@ -1,10 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/tv_user"
+<com.xwlljj.uilibrary.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="15dp"
-    android:text="@string/main_user"
-    android:textColor="@android:color/tertiary_text_light"
-    android:textSize="16sp" />
+    android:layout_height="64dp">
+
+    <LinearLayout
+        android:id="@id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_user"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:text="@string/main_user"
+            android:textColor="@android:color/tertiary_text_light"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/delete_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_store"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#DCDCDC"
+            android:text="收藏" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_red_light"
+            android:text="删除" />
+    </LinearLayout>
+</com.xwlljj.uilibrary.SwipeLayout>
