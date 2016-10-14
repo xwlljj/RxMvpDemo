@@ -3,6 +3,7 @@ package com.raye.mvp.demo.ui;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -14,6 +15,7 @@ import com.raye.mvp.demo.presenter.impl.MainPresenterImpl;
 import com.raye.mvp.demo.ui.adapter.UsersAdapter;
 import com.raye.mvp.demo.ui.view.MainView;
 import com.raye.mvp.demo.widget.RecyclerViewDivider;
+import com.xwlljj.uilibrary.QuickIndexBar;
 
 import java.util.List;
 
@@ -25,11 +27,15 @@ public class MainActivity extends BaseActivity implements MainView {
     private RecyclerView rvUsers;
     private MainPresenter mainPresenter;
     private UsersAdapter usersAdapter;
+    private QuickIndexBar qibIndex;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
+        qibIndex = (QuickIndexBar) findViewById(R.id.qib_index);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         rvUsers = (RecyclerView) findViewById(R.id.rv_users);
         rvUsers.setLayoutManager(new LinearLayoutManager(this,
                 LinearLayoutManager.VERTICAL, false));
@@ -44,6 +50,10 @@ public class MainActivity extends BaseActivity implements MainView {
         usersAdapter.setOnItemClickListener((view, position) ->
                 Toast.makeText(this, usersAdapter.getItem(position).toString(),
                         Toast.LENGTH_LONG).show());
+
+        qibIndex.setIndexTextListener((txt) -> {
+            Log.d(TAG, txt);
+        });
     }
 
     @Override

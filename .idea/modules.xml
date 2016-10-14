@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/RxMvpDemo.iml" filepath="$PROJECT_DIR$/RxMvpDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/avlibrary/avlibrary.iml" filepath="$PROJECT_DIR$/avlibrary/avlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/timdemo/timdemo.iml" filepath="$PROJECT_DIR$/timdemo/timdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uilibrary/uilibrary.iml" filepath="$PROJECT_DIR$/uilibrary/uilibrary.iml" />
     </modules>
   </component>
 </project>

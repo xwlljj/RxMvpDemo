@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xwlljj.tim.demo.MainActivity">
+
+    <RadioGroup
+        android:id="@+id/rg_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/top_line_boader"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_msgs"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="消息"
+            android:textColor="@drawable/tab_item_selector" />
+
+
+        <RadioButton
+            android:id="@+id/rb_contact"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="联系人"
+            android:textColor="@drawable/tab_item_selector" />
+
+        <RadioButton
+            android:id="@+id/rb_profiles"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="我"
+            android:textColor="@drawable/tab_item_selector" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rg_tabs">
+
+    </FrameLayout>
+</RelativeLayout>
