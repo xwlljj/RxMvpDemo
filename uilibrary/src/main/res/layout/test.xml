@@ -6,7 +6,8 @@
 
     <com.xwlljj.uilibrary.SwipeLayout
         android:layout_width="match_parent"
-        android:layout_height="56dp">
+        android:layout_height="56dp"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@id/content_view"
@@ -27,7 +28,11 @@
         android:layout_width="30dp"
         android:layout_height="match_parent"
         android:layout_gravity="right"
-        android:visibility="gone"
-        android:background="@android:color/holo_red_light" />
+        android:background="@android:color/holo_red_light"
+        android:visibility="gone" />
+
+    <com.xwlljj.uilibrary.GooView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </FrameLayout>

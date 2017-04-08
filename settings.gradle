@@ -1,1 +1,1 @@
-include ':app', ':avlibrary', ':timdemo', ':uilibrary'
+include ':app', ':avlibrary', ':timdemo', ':uilibrary', ':greendaodemo'

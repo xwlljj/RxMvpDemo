@@ -1,5 +1,7 @@
 package com.xwlljj.demo.greendao.ui;
 
+import android.os.Bundle;
+
 import com.xwlljj.demo.greendao.BaseActivity;
 
 /**
@@ -7,4 +9,10 @@ import com.xwlljj.demo.greendao.BaseActivity;
  */
 
 public class MainActivity extends BaseActivity {
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 }
